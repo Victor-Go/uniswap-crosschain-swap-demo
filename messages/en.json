@@ -1,3 +1,20 @@
 {
-  "Hello": "Hello"
+  "Hello": "Hello",
+  "Cross-Chain Swap": "Cross-Chain Swap",
+  "Simulate cross-chain token swaps with live Uniswap V3 data and Axelar bridge fee estimates": "Simulate cross-chain token swaps with live Uniswap V3 data and Axelar bridge fee estimates",
+  "Swap Tokens": "Swap Tokens",
+  "From": "From",
+  "To": "To",
+  "Balance": "Balance",
+  "Swap": "Swap",
+  "Bridge Fee": "Bridge Fee",
+  "Gas Fee": "Gas Fee",
+  "USD Equivalent": "USD Equivalent",
+  "Estimated Time": "Estimated Time",
+  "Minutes": "Minutes",
+  "Transactions": "Transactions",
+  "Cancel": "Cancel",
+  "Confirm": "Confirm",
+  "Log out confirm": "Log out confirm",
+  "Are you sure you want to log out of your wallet?": "Are you sure you want to log out of your wallet?"
 }

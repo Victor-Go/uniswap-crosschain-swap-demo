@@ -1,0 +1,102 @@
+.button {
+  --normal-normal-bg: #95959533;
+  --normal-normal-border: #ffffff66;
+  --normal-hover-bg: #d6d6d633;
+  --normal-active-bg: #95959533;
+  --active-normal-bg: #fffe;
+  --active-hover-bg: #ffff;
+  --active-active-bg: #efefef;
+  outline: none;
+
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(7.5px);
+  backdrop-filter: blur(7.5px);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid var(--normal-normal-border);
+  box-sizing: border-box;
+  transition: all ease 0.2s;
+  background: var(--normal-normal-bg);
+  color: #111;
+  box-shadow:
+    inset 0px 0px 5px #0002,
+    0 0 3px #0003;
+
+  &:hover {
+    background: var(--normal-hover-bg);
+    box-shadow: 0 0 15px #0002;
+    color: #000;
+  }
+
+  &:active {
+    background: var(--normal-active-bg);
+    box-shadow: 0 0 3px #0003;
+    border-color: transparent;
+  }
+
+  &--active {
+    background: var(--active-normal-bg);
+    color: black;
+
+    &:hover {
+      cursor: default;
+      background: var(--active-hover-bg);
+      color: black;
+    }
+
+    &:active {
+      background: var(--active-active-bg);
+    }
+  }
+
+  &--red {
+    color: white;
+    background: #de3232cc;
+
+    &:hover {
+      color: white;
+      background: #df7878;
+    }
+
+    &:active {
+      color: white;
+      background: #ca2626;
+    }
+  }
+
+  &--green {
+    color: white;
+    background: #1ac42ecc;
+
+    &:hover {
+      color: white;
+      background: #63de7f;
+    }
+
+    &:active {
+      color: white;
+      background: #16bd34;
+    }
+  }
+
+  &--disabled {
+    background: #bbb;
+
+    &:hover {
+      background: #bababa;
+    }
+
+    &:active {
+      background: #aaa;
+    }
+  }
+
+  & .title {
+    font-weight: 400;
+  }
+
+  & .desc {
+    word-wrap: break-word;
+  }
+}

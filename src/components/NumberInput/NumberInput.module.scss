@@ -1,0 +1,41 @@
+.input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #0001;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  font-size: 20px;
+  height: 40px;
+  box-shadow: 0 1px 3px #0001;
+}
+
+.input__button {
+  width: 40px;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: all ease 0.2s;
+
+  &:hover {
+    background: #eef2f6;
+  }
+
+  &:active {
+    background: #dde4eb;
+  }
+}
+
+.input__field {
+  border: none;
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  background: none;
+  color: #111;
+}

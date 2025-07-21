@@ -1,0 +1,45 @@
+.transaction {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: inset 0px 0px 5px #0002;
+  background: #0001;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #fff;
+    box-shadow: 0 0 10px #aaaa;
+  }
+
+  & .status-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & .address {
+      flex-shrink: 1;
+      color: #555;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    & .status {
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+  }
+
+  & .direction {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 125%;
+  }
+
+  & .time {
+    color: #555;
+  }
+}

@@ -1,0 +1,23 @@
+.dialog {
+  background: #fffa;
+  gap: 0;
+
+  & .body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff6;
+
+    & .actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+
+      & *:first-child {
+        margin-left: auto;
+      }
+    }
+  }
+}

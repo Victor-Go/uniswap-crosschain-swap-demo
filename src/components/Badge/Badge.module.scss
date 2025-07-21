@@ -1,0 +1,24 @@
+.badge {
+  padding: 2.5px 7.5px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 100px;
+
+  &--success {
+    border-color: #58d243;
+    color: #1c8e08;
+    background: #e5ffe0;
+  }
+
+  &--failed {
+    border-color: #d24343;
+    color: #8e0808;
+    background: #ffe0e0;
+  }
+
+  &--warning {
+    border-color: #d2c943;
+    color: #8e8a08;
+    background: #feffe0;
+  }
+}

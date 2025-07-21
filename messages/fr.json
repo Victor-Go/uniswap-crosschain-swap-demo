@@ -1,3 +1,9 @@
 {
-  "Hello": "Bonjour"
+  "Hello": "Bonjour",
+  "Cross-Chain Swap": "Échange inter-chaînes",
+  "Simulate cross-chain token swaps with live Uniswap V3 data and Axelar bridge fee estimates": "Simulez des échanges de jetons inter-chaînes avec les données en direct d’Uniswap V3 et les estimations de frais de pont d’Axelar",
+  "Swap Tokens": "Échanger des jetons",
+  "From": "De",
+  "To": "À",
+  "Balance": "Solde"
 }
