@@ -26,5 +26,7 @@
   "Failed": "Failed",
   "Warning": "Warning",
   "Loading": "Loading",
-  "Estimated Gas": "Estimated Gas"
+  "Estimated Gas": "Estimated Gas",
+  "i18n Support": "i18n Support",
+  "This tool now supports French, switch it in the upper right corner!": "This tool now supports French, switch it in the upper right corner!"
 }

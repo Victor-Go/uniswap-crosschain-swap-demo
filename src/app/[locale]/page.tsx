@@ -7,9 +7,25 @@ import ParticlesBackground from '@/components/ParticlesBackground/ParticlesBackg
 import SwapPanel from '@/components/SwapPanel/SwapPanel'
 import TransactionsPanel from '@/components/TransactionsPanel/TransactionsPanel'
 import LanguageButton from '@/components/LanguageButton/LanguageButton'
+import { useEffect } from 'react'
+import { openDialog } from '@/components/Dialog/DialogManager'
+
+const WELCOME_KEY = 'i18n_welcome'
 
 export default function HomePage() {
   const t = useTranslations()
+
+  useEffect(() => {
+    if (!localStorage.getItem(WELCOME_KEY)) {
+      openDialog({
+        title: t('i18n Support'),
+        description: t(
+          'This tool now supports French, switch it in the upper right corner!',
+        ),
+      })
+      localStorage.setItem(WELCOME_KEY, '1')
+    }
+  }, [t])
 
   return (
     <div className={styles['page']}>

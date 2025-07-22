@@ -26,5 +26,7 @@
   "Failed": "Échec",
   "Warning": "Avertissement",
   "Loading": "Chargement",
-  "Estimated Gas": "Gas estimé"
+  "Estimated Gas": "Gas estimé",
+  "i18n Support": "Prise en charge i18n",
+  "This tool now supports French, switch it in the upper right corner!": "Cet outil prend désormais en charge le français, activez-le dans le coin supérieur droit !"
 }

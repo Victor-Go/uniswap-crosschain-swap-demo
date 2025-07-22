@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Important Notes
+
+Please create a `.env.local` file in the project root and add your API key for The Graph:
+
+```
+NEXT_PUBLIC_THE_GRAPH_KEY=<your_the_graph_api_key>
+```
+
+## Note
+
+The official Uniswap Mainnet Subgraph on The Graph has been deprecated and is no longer accessible.
+This project uses the Arbitrum subgraph as a substitute to fetch Uniswap pool data.
+
+## Live Demo:
+
+You can preview the project in real time at: [https://uniswap-crosschain-swap-demo.vercel.app](https://uniswap-crosschain-swap-demo.vercel.app)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
