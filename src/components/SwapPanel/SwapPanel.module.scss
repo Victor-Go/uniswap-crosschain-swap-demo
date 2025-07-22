@@ -1,0 +1,63 @@
+@use '../../styles/global.scss' as *;
+
+.swap {
+  @extend .panel;
+
+  margin-top: 50px;
+
+  & .button {
+    cursor: pointer;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 12.5px;
+    background: #fffa;
+    box-shadow: 0 0 10px #aaaa;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #fff;
+    }
+
+    &:active {
+      background: #efefef;
+    }
+  }
+
+  & .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: inset 0px 0px 5px #0002;
+    background: #0001;
+    padding: 20px;
+    border-radius: 20px;
+
+    &__slot {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      & > *:nth-child(2) {
+        margin-left: auto;
+      }
+
+      & .refresh-button {
+        cursor: pointer;
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        &--loading {
+          animation: rotate 1s linear infinite;
+        }
+      }
+    }
+  }
+}

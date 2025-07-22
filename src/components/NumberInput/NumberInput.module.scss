@@ -8,6 +8,10 @@
   font-size: 20px;
   height: 40px;
   box-shadow: 0 1px 3px #0001;
+
+  &--disabled {
+    cursor: not-allowed;
+  }
 }
 
 .input__button {
@@ -19,6 +23,10 @@
   color: #333;
   cursor: pointer;
   transition: all ease 0.2s;
+
+  &--disabled {
+    cursor: not-allowed;
+  }
 
   &:hover {
     background: #eef2f6;
@@ -38,4 +46,8 @@
   outline: none;
   background: none;
   color: #111;
+
+  &--disabled {
+    cursor: not-allowed;
+  }
 }

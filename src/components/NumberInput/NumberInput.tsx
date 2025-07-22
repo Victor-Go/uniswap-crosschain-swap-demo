@@ -15,6 +15,7 @@ type Props = {
   step?: number
   className?: string
   valueClassName?: string
+  disabled?: boolean
 }
 const NumberInput: React.FC<Props> = ({
   integerOnly,
@@ -26,12 +27,17 @@ const NumberInput: React.FC<Props> = ({
   step = 1,
   className,
   valueClassName,
+  disabled,
 }) => {
   const [localValue, setLocalValue] = useState(value || 0)
   const valueRef = useRef(localValue)
   useEffect(() => {
     valueRef.current = localValue
   }, [localValue])
+
+  useEffect(() => {
+    setLocalValue(value || 0)
+  }, [value])
 
   const [holdInterval, setHoldInterval] = useState<undefined | NodeJS.Timeout>()
   const [holdTimer, setHoldTimer] = useState(0)
@@ -49,6 +55,8 @@ const NumberInput: React.FC<Props> = ({
   }
 
   const holdStart = (direction: -1 | 1) => {
+    if (disabled) return
+
     const newValue = localValue + direction * step
     setValue(newValue)
 
@@ -78,7 +86,11 @@ const NumberInput: React.FC<Props> = ({
 
   return (
     <div
-      className={clsx(styles['input'], className)}
+      className={clsx(
+        styles['input'],
+        { [styles['input--disabled']]: disabled },
+        className,
+      )}
       style={
         buttonBackground
           ? ({ '--button-bg': buttonBackground } as React.CSSProperties)
@@ -86,7 +98,9 @@ const NumberInput: React.FC<Props> = ({
       }
     >
       <button
-        className={styles['input__button']}
+        className={clsx(styles['input__button'], {
+          [styles['input__button--disabled']]: disabled,
+        })}
         onMouseDown={() => holdStart(-1)}
         onTouchStart={() => holdStart(-1)}
         onMouseUp={holdEnd}
@@ -96,7 +110,12 @@ const NumberInput: React.FC<Props> = ({
       </button>
 
       <input
-        className={clsx(styles['input__field'], valueClassName)}
+        disabled={disabled}
+        className={clsx(
+          styles['input__field'],
+          { [styles['input__field--disabled']]: disabled },
+          valueClassName,
+        )}
         aria-label='number input'
         value={localValue}
         onChange={(e) => {
@@ -110,7 +129,9 @@ const NumberInput: React.FC<Props> = ({
       />
 
       <button
-        className={styles['input__button']}
+        className={clsx(styles['input__button'], {
+          [styles['input__button--disabled']]: disabled,
+        })}
         onMouseDown={() => holdStart(1)}
         onTouchStart={() => holdStart(1)}
         onMouseUp={holdEnd}

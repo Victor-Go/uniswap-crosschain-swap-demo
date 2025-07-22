@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import styles from './Transaction.module.scss'
 import Badge from '../Badge/Badge'
+import dayjs from 'dayjs'
 
 type TransactionProps = {
-  address: string
+  hash: string
   from: string
   to: string
-  status: string
-  timestamp: string
+  status: 'success' | 'failed' | 'warning'
+  timestamp: number
 }
 const Transaction: React.FC<TransactionProps> = ({
-  address,
+  hash,
   from,
   to,
   status,
@@ -19,9 +20,9 @@ const Transaction: React.FC<TransactionProps> = ({
   return (
     <div className={styles['transaction']}>
       <div className={styles['status-bar']}>
-        <div className={styles['address']}>{address}</div>
+        <div className={styles['hash']}>{hash}</div>
         <div className={styles['status']}>
-          <Badge text={status} theme={'success'} />
+          <Badge text={status} theme={status} />
         </div>
       </div>
       <div className={styles['direction']}>
@@ -29,7 +30,9 @@ const Transaction: React.FC<TransactionProps> = ({
         <Image width={20} height={20} src='/icons/arrow.svg' alt='icon' />
         <div>{to}</div>
       </div>
-      <div className={styles['time']}>{timestamp}</div>
+      <div className={styles['time']}>
+        {dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss')}
+      </div>
     </div>
   )
 }

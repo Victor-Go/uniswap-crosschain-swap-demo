@@ -1,1 +1,3 @@
-export type Currency = 'ETH' | 'USDC'
+export type Token = 'ETH' | 'USDC'
+
+export type Network = 'Ethereum' | 'Polygon'
